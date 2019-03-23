@@ -6,8 +6,9 @@ import processing.core.PApplet;
 
 
 public class UI extends PApplet {
-    Button b;
-    MovingCircle mc;
+   
+    Planet p1;
+
 
 
     boolean[] keys = new boolean[1024];
@@ -32,13 +33,16 @@ public class UI extends PApplet {
     public void setup() {
         background(0);
         noStroke();
-        b = new Button(this, 50, 50, 100, 50, "I am a button");
-        mc = new MovingCircle(this, width / 2, height / 2, 50);
-
+       // b = new Button(this, 50, 50, 100, 50, "I am a button");
+        //mc = new MovingCircle(this, width / 2, height / 2, 50);
+        p1 = new Planet(this, height /2 , width / 2, 100);
+ 
     }
 
     public void draw() {
         //background(0);
+        //p.render();
+
         // Fading Stars in the Background
         fill(0,10);
         rect(0, 0, width, height);
@@ -46,7 +50,8 @@ public class UI extends PApplet {
         fill(255);
         ellipse(random(width), random(height), 3 ,3);
 
-
+        p1.render();
+     
 
         
         
