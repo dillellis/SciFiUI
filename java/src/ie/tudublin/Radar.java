@@ -21,9 +21,26 @@ public class Radar
 
     public void render()
     {
+        
+        ui.fill(0,0,0);
+        ui.ellipse(pos.x, pos.y, radius * 2, radius * 2);
+        ui.stroke(36, 248, 229);
+        ui.strokeWeight(2);
+        ui.noFill();
+        ui.ellipse(pos.x, pos.y, radius , radius );
+        ui.strokeWeight(2);
+        ui.ellipse(pos.x, pos.y,radius / 2, radius / 2);
+        ui.strokeWeight(2);
+        ui.ellipse(pos.x, pos.y,(radius + radius / 2) , (radius + radius / 2)) ;
+        
+       
+        
+        
+
         ui.pushMatrix();        
         ui.noFill();
-        ui.stroke(0, 200, 0);
+        ui.strokeWeight(2);
+        ui.stroke(255, 255, 255);
         ui.translate(pos.x, pos.y);
         ui.rotate(theta);
         ui.ellipse(0, 0, radius * 2, radius * 2);
@@ -38,7 +55,7 @@ public class Radar
         ui.line(pos.x, pos.y, x2, y2);
     }
 
-    float timeDelta = 1.0f / 60.0f;
+    float timeDelta = 1.0f / 200.0f;
 
     public void update()
     {
@@ -85,7 +102,6 @@ public class Radar
      */
     public void setFrequency(float frequency) {
         this.frequency = frequency;
-    }
-
     
+    }
 }
