@@ -14,6 +14,7 @@ public class UI extends PApplet {
 
 
 
+
     boolean[] keys = new boolean[1024];
 
     public void keyPressed() {
@@ -31,6 +32,9 @@ public class UI extends PApplet {
     public void settings() {
         // Use fullscreen instead of size to make your interface fullscreen
         fullScreen();
+   
+
+        
     }
 
     public void setup() {
@@ -40,32 +44,22 @@ public class UI extends PApplet {
         //mc = new MovingCircle(this, width / 2, height / 2, 50);
         p1 = new Planet(this, height /2 , width / 2, 100);
         so = new ScreenOutline(this, height, width);
-        r = new Radar(this, 1, 100, 100, 100 );
+        r = new Radar(this, 1, width-width/10, height/2, width/20 );
         s = new Stars(this, height, width);
 
  
     }
 
     public void draw() {
-       
-        //background(0);
-        //p.render();
+       //layered most recent at the top
 
-        // Fading Stars in the Background
-        //fill(0,10);
-        //rect(0, 0, width, height);
- 
-        //fill(255);
-        //ellipse(random(width), random(height), 3 ,3);
-
-       
-        s.render();
+        so.render();
+      
        
         p1.render();
-        //so.render();
         r.render();
         r.update();
-
+        s.render();
        
        
      

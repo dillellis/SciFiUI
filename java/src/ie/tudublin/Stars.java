@@ -24,4 +24,46 @@ public class Stars
         ui.ellipse(ui.random(width), ui.random(height), 3 ,3);
     }
 
+    /**
+     * @return the ui
+     */
+    public UI getUi() {
+        return ui;
+    }
+
+    /**
+     * @param ui the ui to set
+     */
+    public void setUi(UI ui) {
+        this.ui = ui;
+    }
+
+    /**
+     * @return the height
+     */
+    public float getHeight() {
+        return height;
+    }
+
+    /**
+     * @param height the height to set
+     */
+    public void setHeight(float height) {
+        this.height = height;
+    }
+
+    /**
+     * @return the width
+     */
+    public float getWidth() {
+        return width;
+    }
+
+    /**
+     * @param width the width to set
+     */
+    public void setWidth(float width) {
+        this.width = width;
+    }
+
 }
