@@ -23,11 +23,13 @@ public class ScreenOutline
 
         ui.line(width/10, 50, width / 2-width/10, 150);
         ui.line(width-width/10, 50,width/2+width/10,150);
-        ui.line(width - width/10, 50, width - width/10, height-50);
+        ui.line(width-width/10, 50, width - width/10, height-50);
 
-        ui.noFill();
-        
-        ui.rect(width /2 - width/10, 150, (width/10)*2,100 );
+        ui.fill(0,0,0);
+        ui.rect(width /2 - width/10, 50, (width/10)*2,200 );
+
+        ui.noFill();  
+        ui.rect(width /2 - width/10, 50, (width/10)*2,200 );
         
       
      

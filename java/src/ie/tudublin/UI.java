@@ -54,9 +54,7 @@ public class UI extends PApplet {
        //layered most recent at the top
 
         so.render();
-      
-       
-        p1.render();
+        //p1.render();
         r.render();
         r.update();
         s.render();
