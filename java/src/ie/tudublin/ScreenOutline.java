@@ -30,6 +30,29 @@ public class ScreenOutline
 
         ui.noFill();  
         ui.rect(width /2 - width/10, 50, (width/10)*2,200 );
+
+        ui.line(width /2 - width/10, 250,width/2 - 50, 100);
+        ui.line(width /2 + width/10, 250, width/2 + 50, 100);
+
+        ui.line(width/2 - 50, 50, width/2 - 50, 100);
+        ui.line(width/2 + 50, 50, width/2 + 50, 100);
+        ui.line(width/2 - 50, 100, width/2 + 50, 100);
+
+        ui.line(width/2 - 100, 50, width/2 - 100, 150);
+        ui.line(width/2 + 100, 50, width/2 + 100, 150);
+        ui.line(width/2 - 100, 150, width/2 + 100, 150);
+
+        ui.line(width/2 - 150, 50, width/2 - 150, 200);
+        ui.line(width/2 + 150, 50, width/2 + 150, 200);
+        ui.line(width/2 - 150, 200, width/2 + 150, 200);
+
+        ui.stroke(255,0,0);
+        ui.line(width/2, 100, width/2 - 50, 150);
+        ui.line(width/2, 100, width/2 + 50, 150);
+        ui.line(width/2 - 50, 150,width/2 - 25, 150);
+        ui.line(width/2 + 50, 150,width/2 + 25, 150);
+        ui.line(width/2 - 25, 150, width/2, 125);
+        ui.line(width/2 + 25, 150, width/2, 125);
         
       
      
