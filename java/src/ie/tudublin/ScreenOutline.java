@@ -58,6 +58,17 @@ public class ScreenOutline
         ui.triangle(width/2-25, 150, width/2, 125, width/2+25, 150 );
 
         
+        ui.fill(255,0,0);
+        ui.noStroke();
+        ui.triangle(width/2-50, 200, width/2, 150, width/2+50, 200);
+
+        ui.noStroke();
+        ui.fill(0,0,0);
+        ui.triangle(width/2-25, 200, width/2, 175, width/2+25, 200 );
+
+        
+
+        
 
 
         
