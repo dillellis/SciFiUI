@@ -34,25 +34,33 @@ public class ScreenOutline
         ui.line(width /2 - width/10, 250,width/2 - 50, 100);
         ui.line(width /2 + width/10, 250, width/2 + 50, 100);
 
-        ui.line(width/2 - 50, 50, width/2 - 50, 100);
-        ui.line(width/2 + 50, 50, width/2 + 50, 100);
-        ui.line(width/2 - 50, 100, width/2 + 50, 100);
+        //small rectangle
+        ui.rect(width/2 - 50, 50, 100, 50);
 
-        ui.line(width/2 - 100, 50, width/2 - 100, 150);
-        ui.line(width/2 + 100, 50, width/2 + 100, 150);
-        ui.line(width/2 - 100, 150, width/2 + 100, 150);
+        ui.rect(width/2 - 100, 50, 200, 100);
 
-        ui.line(width/2 - 150, 50, width/2 - 150, 200);
-        ui.line(width/2 + 150, 50, width/2 + 150, 200);
-        ui.line(width/2 - 150, 200, width/2 + 150, 200);
+        ui.rect(width/2 - 150, 50, 300, 150);
 
-        ui.stroke(255,0,0);
-        ui.line(width/2, 100, width/2 - 50, 150);
-        ui.line(width/2, 100, width/2 + 50, 150);
-        ui.line(width/2 - 50, 150,width/2 - 25, 150);
-        ui.line(width/2 + 50, 150,width/2 + 25, 150);
-        ui.line(width/2 - 25, 150, width/2, 125);
-        ui.line(width/2 + 25, 150, width/2, 125);
+        //ui.stroke(255,0,0);
+        //ui.line(width/2, 100, width/2 - 50, 150);
+        //ui.line(width/2, 100, width/2 + 50, 150);
+        //ui.line(width/2 - 50, 150,width/2 - 25, 150);
+        //ui.line(width/2 + 50, 150,width/2 + 25, 150);
+        //ui.line(width/2 - 25, 150, width/2, 125);
+        //ui.line(width/2 + 25, 150, width/2, 125);
+
+        ui.fill(255,0,0);
+        ui.noStroke();
+        ui.triangle(width/2-50, 150, width/2, 100, width/2+50, 150);
+
+        ui.noStroke();
+        ui.fill(0,0,0);
+        ui.triangle(width/2-25, 150, width/2, 125, width/2+25, 150 );
+
+        
+
+
+        
         
       
      
