@@ -20,10 +20,18 @@ public class ScreenOutline
     }
     public void render()
     {
-
+        //top slants
         ui.line(width/10, 50, width / 2-width/10, 150);
+        ui.line(width/10, height - 50, width / 2-width/10, height - 150);
+
+        //bottom slants
         ui.line(width-width/10, 50,width/2+width/10,150);
+        ui.line(width-width/10, height - 50,width/2+width/10, height - 150);
+
+        //sides
+        ui.line(width/10, 50, width/10, height-50);
         ui.line(width-width/10, 50, width - width/10, height-50);
+        
 
         ui.fill(0,0,0);
         ui.rect(width /2 - width/10, 50, (width/10)*2,200 );
