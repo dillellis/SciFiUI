@@ -22,23 +22,23 @@ public class ScreenOutline
     {
         //top slants
         ui.line(width/10, 50, width / 2-width/10, 150);
-        ui.line(width/10, height - 50, width / 2-width/10, height - 150);
+        ui.line(width-width/10, 50,width/2+width/10,150);
 
         //bottom slants
-        ui.line(width-width/10, 50,width/2+width/10,150);
-        ui.line(width-width/10, height - 50,width/2+width/10, height - 150);
+        ui.line(width/10, height - 50, width / 2-width/5, height - 150);
+        ui.line(width-width/10, height - 50,width/2+width/5, height - 150);
 
         //sides
         ui.line(width/10, 50, width/10, height-50);
         ui.line(width-width/10, 50, width - width/10, height-50);
         
-
+        //Top rect
         ui.fill(0,0,0);
         ui.rect(width /2 - width/10, 50, (width/10)*2,200 );
-
         ui.noFill();  
         ui.rect(width /2 - width/10, 50, (width/10)*2,200 );
 
+        //slants inside top rect
         ui.line(width /2 - width/10, 250,width/2 - 50, 100);
         ui.line(width /2 + width/10, 250, width/2 + 50, 100);
 
@@ -84,6 +84,10 @@ public class ScreenOutline
         ui.noStroke();
         ui.fill(0,0,0);
         ui.triangle(width/2-25, 250, width/2, 225, width/2+25, 250 );
+
+        ui.stroke(255,0,0);
+        ui.curve(width / 2 - 300, height , width / 2-width/5, height - 300,  width/2+width/5, height - 300, width / 2 + 300, height);
+
 
 
 
