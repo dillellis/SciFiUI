@@ -103,6 +103,8 @@ public class ScreenOutline
         ui.curveVertex(width / 2, height - 100);
         ui.curveVertex(width / 2-width/5, height - 50);
         ui.curveVertex(width / 10, height + 100);
+        ui.vertex(width / 2-width/5, height - 50);
+        ui.vertex(width / 2-width/5, height - 250);
         ui.endShape();
 
 
