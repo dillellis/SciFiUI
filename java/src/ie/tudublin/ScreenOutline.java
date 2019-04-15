@@ -96,7 +96,8 @@ public class ScreenOutline
         ui.curveVertex(width / 2, height - 300);
         ui.curveVertex(width / 2+width/5, height - 250);
         ui.curveVertex(width - width / 10, height - 100);
-
+        ui.vertex(width / 2+width/5, height - 250);
+        ui.vertex(width / 2+width/5, height - 50);
         ui.endShape();
 
 
