@@ -85,8 +85,19 @@ public class ScreenOutline
         ui.fill(0,0,0);
         ui.triangle(width/2-25, 250, width/2, 225, width/2+25, 250 );
 
-        ui.stroke(255,0,0);
-        ui.curve(width / 2 - 300, height , width / 2-width/5, height - 300,  width/2+width/5, height - 300, width / 2 + 300, height);
+        //BottomConsole
+        //ui.stroke(255,0,0);
+        //ui.curve(width / 2 - 300, height , width / 2-width/5, height - 300,  width/2+width/5, height - 300, width / 2 + 300, height);
+        ui.stroke(255);
+        ui.fill(0,0,0);
+        ui.beginShape();
+        ui.curveVertex(width / 10, height - 100);
+        ui.curveVertex(width / 2-width/5, height - 250);
+        ui.curveVertex(width / 2, height - 300);
+        ui.curveVertex(width / 2+width/5, height - 250);
+        ui.curveVertex(width - width / 10, height - 100);
+
+        ui.endShape();
 
 
 
