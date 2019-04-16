@@ -42,7 +42,6 @@ public class UI extends PApplet {
         noStroke();
        // b = new Button(this, 50, 50, 100, 50, "I am a button");
         //mc = new MovingCircle(this, width / 2, height / 2, 50);
-        p1 = new Planet(this, height /2 , width / 2, 100);
         so = new ScreenOutline(this, height, width);
         r = new Radar(this, 1, width-width/10, height/2, width/20 );
         s = new Stars(this, height, width);
@@ -54,7 +53,6 @@ public class UI extends PApplet {
        //layered most recent at the top
 
         so.render();
-        //p1.render();
         r.render();
         r.update();
         s.render();
