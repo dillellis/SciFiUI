@@ -122,8 +122,8 @@ public class ScreenOutline
         ui.vertex((width / 2-width/5) + 25, height - 225);
         ui.endShape();
 
-        ui.line((width / 2-width/10), height - 225, (width / 2-width/10), height - 400);
-        ui.line((width / 2+width/10), height - 225, (width / 2+width/10), height - 400);
+        //ui.line((width / 2-width/10), height - 225, (width / 2-width/10), height - 400);
+        //ui.line((width / 2+width/10), height - 225, (width / 2+width/10), height - 400);
     
         
 
