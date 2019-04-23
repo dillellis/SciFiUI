@@ -24,6 +24,13 @@ public class ScreenOutline
     public void render()
     {
 
+        //CrossHairs
+        ui.noFill();
+        ui.stroke(128,128,128);
+        ui.ellipse(width / 2, height / 2, 75, 75);
+        ui.line(width / 2, height / 2 - 45, width / 2, height / 2 + 45);
+        ui.line(width / 2 - 45, height / 2, width / 2 + 45, height / 2);
+
         //Two cannons in each corner to shoot bullets/lasers
         ui.noStroke();
         ui.fill(47,79,79);
