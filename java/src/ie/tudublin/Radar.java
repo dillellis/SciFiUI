@@ -10,7 +10,7 @@ public class Radar
     private float frequency;
     private UI ui;
     private float theta = 0;
-
+   
     public Radar(UI ui, float frequency, float x, float y, float radius)
     {
         this.ui = ui;
@@ -21,6 +21,7 @@ public class Radar
 
     public void render()
     {
+    
         
         ui.fill(0,0,0);
         ui.ellipse(pos.x, pos.y, radius * 2, radius * 2);
@@ -53,6 +54,10 @@ public class Radar
         float x2 = pos.x + (float) Math.sin(theta) * radius;
         float y2 = pos.y - (float) Math.cos(theta) * radius;
         ui.line(pos.x, pos.y, x2, y2);
+
+        
+
+   
     }
 
     float timeDelta = 1.0f / 200.0f;

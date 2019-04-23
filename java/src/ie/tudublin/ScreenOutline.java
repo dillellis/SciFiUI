@@ -1,8 +1,11 @@
 package ie.tudublin;
 
-import processing.core.PConstants;
-import static processing.core.PConstants.CENTER;
+
+import processing.core.PVector;
+
 import processing.core.PApplet;
+import processing.core.PConstants;
+
 
 
 public class ScreenOutline
@@ -20,6 +23,27 @@ public class ScreenOutline
     }
     public void render()
     {
+
+        //Two cannons in each corner to shoot bullets/lasers
+        ui.noStroke();
+        ui.fill(47,79,79);
+        ui.beginShape();
+        ui.vertex(0, height - 50);
+        ui.vertex(150, height - 135);
+        ui.vertex(200, height - 60);
+        ui.vertex(100, height);
+        ui.vertex(0, height);
+        ui.endShape();
+ 
+        ui.beginShape();
+        ui.vertex(width, height - 50);
+        ui.vertex(width - 150, height - 135);
+        ui.vertex(width - 200, height - 60);
+        ui.vertex(width - 100, height);
+        ui.vertex(width, height);
+        ui.endShape();
+
+        ui.stroke(255,255,255);
         //top slants
         ui.line(width/10, 50, width / 2-width/10, 150);
         ui.line(width-width/10, 50,width/2+width/10,150);
@@ -106,8 +130,8 @@ public class ScreenOutline
         ui.vertex(width / 2-width/5, height - 250);
         ui.endShape();
 
+        //inner console shape
         ui.beginShape();
-        
         ui.curveVertex(width / 10, height - 100);
         ui.curveVertex((width / 2-width/5) + 25, height - 225);
         ui.curveVertex(width / 2, height - 275);
@@ -125,10 +149,7 @@ public class ScreenOutline
         //ui.line((width / 2-width/10), height - 225, (width / 2-width/10), height - 400);
         //ui.line((width / 2+width/10), height - 225, (width / 2+width/10), height - 400);
     
-        
-
-
-
+    
 
 
         

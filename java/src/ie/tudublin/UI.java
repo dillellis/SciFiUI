@@ -11,6 +11,9 @@ public class UI extends PApplet {
     ScreenOutline so;
     Radar r;
     Stars s;
+    Bullet b;
+
+    boolean space = false;
 
 
 
@@ -19,10 +22,23 @@ public class UI extends PApplet {
 
     public void keyPressed() {
         keys[keyCode] = true;
+
+        switch (keyCode) {
+        case 32:
+            space = true;
+            break;
+        }
+
     }
 
     public void keyReleased() {
         keys[keyCode] = true;
+
+        switch (keyCode) {
+            case 32:
+                space = true;
+                break;
+            }
     }
 
     public boolean checkKey(int c) {
@@ -45,7 +61,9 @@ public class UI extends PApplet {
         so = new ScreenOutline(this, height, width);
         r = new Radar(this, 1, width-width/10, height/2, width/20 );
         s = new Stars(this, height, width);
+        b = new Bullet(this, width /2 , height, 5 , 0 , height, width );
 
+         boolean space = false;
  
     }
 
@@ -58,8 +76,12 @@ public class UI extends PApplet {
         s.render();
        
        
-     
+       if (space){
+           b.setStart(width / 2, height,0);
+       }
 
+       b.update();
+       b.render();
         
         
 
