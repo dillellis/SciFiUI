@@ -1,10 +1,7 @@
 package ie.tudublin;
 
 
-import processing.core.PVector;
 
-import processing.core.PApplet;
-import processing.core.PConstants;
 
 
 

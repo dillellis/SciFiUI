@@ -10,7 +10,11 @@ public class Radar
     private float frequency;
     private UI ui;
     private float theta = 0;
-   
+    private float opacity = 0;
+    private float opacity2 = 0;
+    private float opacity3 = 0;
+    private float diameter = 1;
+
     public Radar(UI ui, float frequency, float x, float y, float radius)
     {
         this.ui = ui;

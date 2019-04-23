@@ -12,6 +12,7 @@ public class UI extends PApplet {
     Radar r;
     Stars s;
     Bullet b;
+    Shield sh;
 
     boolean space = false;
 
@@ -49,7 +50,7 @@ public class UI extends PApplet {
         // Use fullscreen instead of size to make your interface fullscreen
         fullScreen();
    
-
+        
         
     }
 
@@ -62,7 +63,7 @@ public class UI extends PApplet {
         r = new Radar(this, 1, width-width/10, height/2, width/20 );
         s = new Stars(this, height, width);
         b = new Bullet(this, width /2 , height, 5 , 0 , height, width );
-
+        sh = new Shield(this, width / 2  , height / 2);
          boolean space = false;
  
     }
@@ -73,6 +74,8 @@ public class UI extends PApplet {
         so.render();
         r.render();
         r.update();
+        sh.render();
+        sh.update();
         s.render();
        
        
