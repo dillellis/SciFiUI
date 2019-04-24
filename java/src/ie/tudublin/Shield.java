@@ -33,7 +33,11 @@ public class Shield
         ui.pushMatrix();
         ui.translate(pos.x, pos.y);
         ui.rotate((float)angle);
-        //ui.noStroke();      
+        ui.noStroke();
+        ui.fill(57, 255, 20);
+        ui.ellipse(100, 100, 75, 75);
+        ui.ellipse(150, 0, 50, 50);
+        ui.ellipse(125, -75, 25, 25);        
         ui.popMatrix();
         
 
