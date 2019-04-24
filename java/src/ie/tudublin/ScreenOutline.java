@@ -87,7 +87,7 @@ public class ScreenOutline
 
 
         //arrow1
-        ui.fill(255,0,0);
+        ui.fill(57, 255, 20);
         ui.noStroke();
         ui.triangle(width/2-50, 150, width/2, 100, width/2+50, 150);
 
@@ -96,7 +96,7 @@ public class ScreenOutline
         ui.triangle(width/2-25, 150, width/2, 125, width/2+25, 150 );
 
         //arrow2
-        ui.fill(255,0,0);
+        ui.fill(57, 255, 20);
         ui.noStroke();
         ui.triangle(width/2-50, 200, width/2, 150, width/2+50, 200);
 
@@ -105,7 +105,7 @@ public class ScreenOutline
         ui.triangle(width/2-25, 200, width/2, 175, width/2+25, 200 );
 
         //arrow3
-        ui.fill(255,0,0);
+        ui.fill(57, 255, 20);
         ui.noStroke();
         ui.triangle(width/2-50, 250, width/2, 200, width/2+50, 250);
 
