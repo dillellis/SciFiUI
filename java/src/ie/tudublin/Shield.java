@@ -19,14 +19,21 @@ public class Shield
     public void render()
     {
         ui.fill(0,0,0);
-        ui.ellipse(pos.x, pos.y, 400, 400);
+        ui.ellipse(pos.x, pos.y, 200, 200);
+
+        ui.stroke(57, 255, 20);
+        ui.arc(pos.x, pos.y, 50, 50, (float)degree*180,(float)degree*360);
+        ui.line(pos.x + 25, pos.y, pos.x + 50, pos.y+10);
+        ui.line(pos.x - 25, pos.y, pos.x - 50, pos.y+10);
+        ui.line(pos.x + 50, pos.y + 10, pos.x + 25, pos.y + 20);
+        ui.line(pos.x - 50, pos.y + 10, pos.x - 25, pos.y + 20 );
+        ui.line(pos.x + 25, pos.y + 20, pos.x - 25, pos.y + 20);
+        ui.stroke(255,255,255);
 
         ui.pushMatrix();
         ui.translate(pos.x, pos.y);
         ui.rotate((float)angle);
-        ui.fill(255,255,255);
-        ui.rect(0, 0, 100, 100);
-        
+        //ui.noStroke();      
         ui.popMatrix();
         
 
@@ -34,7 +41,7 @@ public class Shield
 
     public void update()
     {
-        angle =angle + degree;
+        angle =angle + 2*degree;
 
     }
 
