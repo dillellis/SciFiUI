@@ -39,7 +39,7 @@ public class Bullet
         ui.pushMatrix();
         ui.translate(pos.x, pos.y);
         
-        ui.stroke(255,255,255);
+        ui.stroke(255, 206, 0);
         ui.ellipse(0, 0, 5, 5);
         ui.popMatrix();
     }

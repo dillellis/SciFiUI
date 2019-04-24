@@ -99,8 +99,7 @@ public class UI extends PApplet {
     public void draw() {
        //layered most recent at the top
 
-       b.render();
-       b.update();
+        
         so.render();
         s.render();
         r.render();
@@ -109,6 +108,7 @@ public class UI extends PApplet {
         sh.update();
         b.render();
         b.update();
+        shB.render();
             
 
        
