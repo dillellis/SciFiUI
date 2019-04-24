@@ -13,6 +13,7 @@ public class UI extends PApplet {
     Stars s;
     Bullet b;
     Shield sh;
+    ShootButton shB;
 
     boolean space = false;
 
@@ -64,7 +65,7 @@ public class UI extends PApplet {
         s = new Stars(this, height, width);
         b = new Bullet(this, width /2 , height, 5 , 0 , height, width );
         sh = new Shield(this, width/10 , height / 2);
-         boolean space = false;
+        shB = new ShootButton(this, width / 2, height - 200);
  
     }
 
@@ -72,6 +73,7 @@ public class UI extends PApplet {
        //layered most recent at the top
 
         so.render();
+        shB.render();
         r.render();
         r.update();
         sh.render();
