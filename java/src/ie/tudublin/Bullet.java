@@ -8,57 +8,50 @@ public class Bullet
     UI ui;
     float x;
     float y;
-    float rotation;
+    double rotation;
     PVector pos;
-    float speed = 0;
-    float maxSpeed = 10;
+    PVector forward;
+    float speed;
     private float height;
     private float width;
-    public boolean firing = false;
+    
 
 
 
-    public Bullet(UI ui, float x, float y, float rotation, float speed, float height, float width)
+    public Bullet(UI ui, float x, float y, double rotation, float speed, float height, float width)
     {
         this.ui = ui;
         this.x = x;
         this.y = y;
         this.rotation = rotation;
         pos = new PVector(x, y);
+        forward = new PVector(0, -1);
         this.speed = speed;
         this.height = height;
         this.width = width;
     }
 
-    void setStart(float startX, float startY, float startRotation)
-    {
-        x = startX;
-        y = startY;
-        rotation = startRotation;
-    }
+    
 
     public void render()
     {
+        ui.ellipse(200, 200, 200 ,200);
         ui.pushMatrix();
         ui.translate(pos.x, pos.y);
-        ui.rotate(rotation);
-        ui.line(0, -5, 0, 5);
+        
+        ui.stroke(255,255,255);
+        ui.ellipse(0, 0, 5, 5);
         ui.popMatrix();
     }
 
     public void update()
     {
-        if (firing == true){
-            if (speed < maxSpeed)
-            {
-                speed += 1;
-            }
+        forward.x = (float)Math.sin(1.0472);
+        forward.y = - (float)Math.cos(1.0472);
 
-            if (x > width || x < 0 || y > height || y < 0)
-            {
-                speed = 0;
-                firing = false;
-            }
-        }
+        // pos += forward * speed
+        pos.add(PVector.mult(forward, speed));
+
+
     }
 }

@@ -47,6 +47,33 @@ public class UI extends PApplet {
         return keys[c] || keys[Character.toUpperCase(c)];
     }
 
+    
+    public void mouseClicked(){
+
+        int which = -1;
+
+        
+        if ((mouseX > width / 2 - 40 && mouseX < width / 2 + 40))
+        {
+            if ((mouseY > height - 240 && mouseY < height - 160))
+            {
+                 which = (int) 1;
+    
+            }
+        }
+
+        if (which == 1)
+        {
+            
+            b.render();
+            b.update();
+            
+        }
+
+     
+    }
+
+
     public void settings() {
         // Use fullscreen instead of size to make your interface fullscreen
         fullScreen();
@@ -63,7 +90,7 @@ public class UI extends PApplet {
         so = new ScreenOutline(this, height, width);
         r = new Radar(this, 1, width-width/10, height/2, width/20 );
         s = new Stars(this, height, width);
-        b = new Bullet(this, width /2 , height, 5 , 0 , height, width );
+        b = new Bullet(this, 0 , height, 0.785398 , 1 , height, width );
         sh = new Shield(this, width/10 , height / 2);
         shB = new ShootButton(this, width / 2, height - 200);
  
@@ -72,22 +99,28 @@ public class UI extends PApplet {
     public void draw() {
        //layered most recent at the top
 
+       b.render();
+       b.update();
         so.render();
-        shB.render();
+        s.render();
         r.render();
         r.update();
         sh.render();
         sh.update();
-        s.render();
-       
-       
-       if (space){
-           b.setStart(width / 2, height,0);
-       }
+        b.render();
+        b.update();
+            
 
-       b.update();
-       b.render();
+       
         
+
+        
+
+        
+       
+       
+      
+
         
 
 

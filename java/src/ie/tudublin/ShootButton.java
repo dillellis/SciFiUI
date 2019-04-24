@@ -17,7 +17,9 @@ public class ShootButton {
     public void render()
     {
         ui.noFill();
-        ui.stroke(128,128,128);
+        ui.rect(pos.x- 40, pos.y - 40, 80,80);
+        ui.noFill();
+        ui.stroke(57, 255, 20);
         ui.ellipse(pos.x, pos.y , 55, 55);
         ui.line( pos.x, pos.y - 35, pos.x, pos.y + 35);
         ui.line(pos.x - 35, pos.y, pos.x + 35, pos.y);
