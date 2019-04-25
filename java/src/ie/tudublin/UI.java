@@ -15,6 +15,7 @@ public class UI extends PApplet {
     Bullet bRight;
     Shield sh;
     ShootButton shB;
+    ShieldButton shBu;
 
     boolean space = false;
 
@@ -53,11 +54,11 @@ public class UI extends PApplet {
     public void mouseClicked(){
 
         //int which = -1;
-
         
-        if ((mouseX > width / 2 - 40 && mouseX < width / 2 + 40))
+        
+        if ((mouseX > (width / 2 + width / 10) - 40 && mouseX < (width / 2 + width / 10) + 40))
         {
-            if ((mouseY > height - 240 && mouseY < height - 160))
+            if ((mouseY > height - 225 && mouseY < height - 145))
             {
                  which = (int) 1;
     
@@ -95,12 +96,13 @@ public class UI extends PApplet {
         bLeft = new Bullet(this, 0 , height, 1.06465, 5, 1 , height, width );
         bRight = new Bullet(this, width , height, 5.21853 , 5, 2 ,  height, width );
         sh = new Shield(this, width/10 , height / 2);
-        shB = new ShootButton(this, width / 2, height - 200);
+        shB = new ShootButton(this, width / 2 + width / 10, height - 185);
+        shBu = new ShieldButton(this, width /2 - width/10, height - 200);
  
     }
-    //0.785398
+
     public void draw() {
-       //layered most recent at the top
+
 
         
         so.render();
@@ -109,9 +111,8 @@ public class UI extends PApplet {
         r.update();
         sh.render();
         sh.update();
-        // b.render();
-        // b.update();
         shB.render();
+        shBu.render();
 
         if (which == 1)
         {
