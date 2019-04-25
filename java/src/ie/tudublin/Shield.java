@@ -9,8 +9,12 @@ public class Shield {
     UI ui;
     double angle = 0;
     double degree = 0.0174533;
+    float width;
+    float height;
 
-    public Shield(UI ui, float x, float y) {
+    public Shield(UI ui, float x, float y, float width, float height) {
+        this.width = width;
+        this.height = height;
         this.ui = ui;
         pos = new PVector(x, y);
 
@@ -53,6 +57,15 @@ public class Shield {
     public void update()
     {
         angle =angle + 2*degree;
+
+    }
+
+    public void shieldOn()
+    {
+        angle = angle + 10*degree;
+        ui.fill(57, 255, 20);
+        ui.textSize(20);
+        ui.text("ON",width /2 - width/10, height - 210);
 
     }
 

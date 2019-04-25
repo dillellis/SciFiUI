@@ -49,7 +49,9 @@ public class UI extends PApplet {
         return keys[c] || keys[Character.toUpperCase(c)];
     }
 
-    int which = -1;
+    int fire = -1;
+    int restore = 1;
+	
     
     public void mouseClicked(){
 
@@ -60,19 +62,19 @@ public class UI extends PApplet {
         {
             if ((mouseY > height - 225 && mouseY < height - 145))
             {
-                 which = (int) 1;
+                 fire = (int) 1;
     
             }
         }
 
-        // if (which == 1)
-        // {
-            
-        //     b.render();
-        //     b.update();
-            
-        // }
-
+       if ((mouseX > width /2 - width/10  && mouseX < width /2 - width/10 + 50))
+       {
+           if(mouseY > height - 200  && mouseY < height - 140 )
+           {
+                restore ++;
+           }
+       }
+  
      
     }
 
@@ -95,7 +97,7 @@ public class UI extends PApplet {
         s = new Stars(this, height, width);
         bLeft = new Bullet(this, 0 , height, 1.06465, 5, 1 , height, width );
         bRight = new Bullet(this, width , height, 5.21853 , 5, 2 ,  height, width );
-        sh = new Shield(this, width/10 , height / 2);
+        sh = new Shield(this, width/10 , height / 2, width, height);
         shB = new ShootButton(this, width / 2 + width / 10, height - 185);
         shBu = new ShieldButton(this, width /2 - width/10, height - 200);
  
@@ -114,7 +116,7 @@ public class UI extends PApplet {
         shB.render();
         shBu.render();
 
-        if (which == 1)
+        if (fire == 1)
         {
             
             bLeft.render();
@@ -123,6 +125,15 @@ public class UI extends PApplet {
             bRight.render();
             bRight.update();
             
+        }
+
+        int startTime = 0;
+        final int DISPLAY_DURATION = 5000;
+
+        if (restore % 2 == 0)
+        {
+            sh.shieldOn();
+
         }
             
         
