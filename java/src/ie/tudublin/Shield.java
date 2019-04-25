@@ -3,16 +3,19 @@ package ie.tudublin;
 
 import processing.core.PVector;
 
-public class Shield {
+public class Shield extends UIObject{
 
     private PVector pos;
-    UI ui;
     double angle = 0;
     double degree = 0.0174533;
-    float width;
-    float height;
+     
 
     public Shield(UI ui, float x, float y, float width, float height) {
+
+        /*trying to use polymorphism but if I get rid off the 'this.' in place of super 
+          the ON text will not come up on the shield*/
+
+        super(ui, x, y, width, height);
         this.width = width;
         this.height = height;
         this.ui = ui;
@@ -49,7 +52,7 @@ public class Shield {
 
         ui.fill(57, 255, 20);
         ui.textSize(20);
-        ui.text("Shield regeneration",pos.x - 100 , pos.y + 200);
+        ui.text("SHIELDS",pos.x - 30 , pos.y + 200);
         
         
 

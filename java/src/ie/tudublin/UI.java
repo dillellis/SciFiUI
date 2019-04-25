@@ -7,7 +7,6 @@ import processing.core.PApplet;
 
 public class UI extends PApplet {
    
-    Planet p1;
     ScreenOutline so;
     Radar r;
     Stars s;
@@ -84,7 +83,7 @@ public class UI extends PApplet {
         noStroke();
        // b = new Button(this, 50, 50, 100, 50, "I am a button");
         //mc = new MovingCircle(this, width / 2, height / 2, 50);
-        so = new ScreenOutline(this, height, width);
+        so = new ScreenOutline(this, 0, 0, height, width);
         r = new Radar(this, 1, width-width/10, height/2, width/20 );
         s = new Stars(this, height, width);
         bLeft = new Bullet(this, 0 , height, 1.06465, 5, 1 , height, width );
@@ -97,7 +96,7 @@ public class UI extends PApplet {
 
     public void draw() {
 
-
+    
         
         so.render();
         s.render();

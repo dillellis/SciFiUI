@@ -5,17 +5,13 @@ package ie.tudublin;
 
 
 
-public class ScreenOutline
+public class ScreenOutline extends UIObject
 {
-    private float height;
-    private float width;
-    UI ui;
+    
 
-    public ScreenOutline(UI ui, float height, float width)
+    public ScreenOutline(UI ui, float x, float y, float height, float width)
     {
-        this.ui = ui;
-        this.height = height;
-        this.width = width;
+        super(ui, x, y, height, width);
 
     }
     public void render()
@@ -205,6 +201,11 @@ public class ScreenOutline
      */
     public void setUi(UI ui) {
         this.ui = ui;
+    }
+
+    @Override
+    public void update() {
+
     };
     
 }
