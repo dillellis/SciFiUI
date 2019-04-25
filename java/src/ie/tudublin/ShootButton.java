@@ -16,7 +16,8 @@ public class ShootButton {
 
     public void render()
     {
-        
+
+        //crosshair icon for shoot button
         ui.noFill();
         ui.stroke(57, 255, 20);
         ui.ellipse(pos.x, pos.y , 55, 55);

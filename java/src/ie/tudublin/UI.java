@@ -46,9 +46,9 @@ public class UI extends PApplet {
     
     public void mouseClicked(){
 
-        //int which = -1;
+      
         
-        
+        //boundaries for shoot button
         if ((mouseX > (width / 2 + width / 10) - 40 && mouseX < (width / 2 + width / 10) + 40))
         {
             if ((mouseY > height - 225 && mouseY < height - 145))
@@ -58,6 +58,7 @@ public class UI extends PApplet {
             }
         }
 
+        //boundaries for shield button
        if ((mouseX > width /2 - width/10  && mouseX < width /2 - width/10 + 50))
        {
            if(mouseY > height - 200  && mouseY < height - 140 )
@@ -107,6 +108,8 @@ public class UI extends PApplet {
         shB.render();
         shBu.render();
 
+
+        //if the value of fire has been changed then the bullets are fired
         if (fire == 1)
         {
             
@@ -119,6 +122,7 @@ public class UI extends PApplet {
         }
 
 
+        // if the value of restore is an even number the shield is on, if not it is turned off
         if (restore % 2 == 0)
         {
             sh.shieldOn();

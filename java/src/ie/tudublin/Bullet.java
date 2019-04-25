@@ -40,7 +40,7 @@ public class Bullet
 
     public void render()
     {
-       
+        //draws ellipse as a bullet
         ui.pushMatrix();
         ui.translate(pos.x, pos.y);
         
@@ -52,13 +52,15 @@ public class Bullet
     public void update()
     {
        
-
+        // rotates the direction of the bullet
         forward.x = (float)Math.sin(rotation);
         forward.y = - (float)Math.cos(rotation);
 
-        
+        //moves the bullet forward
         pos.add(PVector.mult(forward, speed));
 
+
+        //in set up if direction is 1 it stops the bullet from entering the right side of the screen
         if (direction == 1)
         {
             while(pos.x > width / 2)
@@ -69,6 +71,7 @@ public class Bullet
             }
         }   
 
+        //in set up if direction is 2 it stops the bullet from entering the left side of the screen
         if (direction == 2)
         {
             while(pos.x < width /2)

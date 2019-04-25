@@ -17,7 +17,7 @@ public class ShieldButton {
 
     public void render()
     {
-        
+        //the shield icon for the shield button
         ui.noFill();
         ui.stroke(57, 255, 20);
         ui.beginShape();

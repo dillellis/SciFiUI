@@ -73,13 +73,7 @@ public class ScreenOutline extends UIObject
 
         ui.rect(width/2 - 150, 50, 300, 150);
 
-        //ui.stroke(255,0,0);
-        //ui.line(width/2, 100, width/2 - 50, 150);
-        //ui.line(width/2, 100, width/2 + 50, 150);
-        //ui.line(width/2 - 50, 150,width/2 - 25, 150);
-        //ui.line(width/2 + 50, 150,width/2 + 25, 150);
-        //ui.line(width/2 - 25, 150, width/2, 125);
-        //ui.line(width/2 + 25, 150, width/2, 125);
+
 
 
         //arrow1
@@ -119,14 +113,12 @@ public class ScreenOutline extends UIObject
         ui.curveVertex(width / 2, height - 300);
         ui.curveVertex(width / 2+width/5, height - 250);
         ui.curveVertex(width - width / 10, height - 100);
-        //ui.vertex(width / 2+width/5, height - 250);
         ui.vertex(width / 2+width/5, height - 50);
         ui.curveVertex(width - width / 10, height + 100);
         ui.curveVertex(width / 2+width/5, height - 50);
         ui.curveVertex(width / 2, height - 100);
         ui.curveVertex(width / 2-width/5, height - 50);
         ui.curveVertex(width / 10, height + 100);
-        //ui.vertex(width / 2-width/5, height - 50);
         ui.vertex(width / 2-width/5, height - 250);
         ui.endShape();
 
@@ -145,15 +137,6 @@ public class ScreenOutline extends UIObject
         ui.curveVertex(width / 10, height + 50);
         ui.vertex((width / 2-width/5) + 25, height - 225);
         ui.endShape();
-
-        //ui.line((width / 2-width/10), height - 225, (width / 2-width/10), height - 400);
-        //ui.line((width / 2+width/10), height - 225, (width / 2+width/10), height - 400);
-    
-    
-
-
-        
-
 
         
         

@@ -1,3 +1,11 @@
+/*
+
+Tried to use polymorphism but became to complicated & messy
+
+*/
+
+
+
 package ie.tudublin;
 
 import processing.core.PVector;
