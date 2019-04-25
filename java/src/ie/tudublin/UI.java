@@ -17,7 +17,7 @@ public class UI extends PApplet {
     ShootButton shB;
     ShieldButton shBu;
 
-    boolean space = false;
+ 
 
 
 
@@ -27,22 +27,14 @@ public class UI extends PApplet {
     public void keyPressed() {
         keys[keyCode] = true;
 
-        switch (keyCode) {
-        case 32:
-            space = true;
-            break;
-        }
+        
 
     }
 
     public void keyReleased() {
         keys[keyCode] = true;
 
-        switch (keyCode) {
-            case 32:
-                space = true;
-                break;
-            }
+       
     }
 
     public boolean checkKey(int c) {
@@ -127,8 +119,6 @@ public class UI extends PApplet {
             
         }
 
-        int startTime = 0;
-        final int DISPLAY_DURATION = 5000;
 
         if (restore % 2 == 0)
         {

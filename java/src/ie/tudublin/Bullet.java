@@ -1,6 +1,6 @@
 package ie.tudublin;
 
-import java.util.ArrayList;
+
 
 import processing.core.PVector;
 
@@ -56,7 +56,7 @@ public class Bullet
         forward.x = (float)Math.sin(rotation);
         forward.y = - (float)Math.cos(rotation);
 
-        // pos += forward * speed
+        
         pos.add(PVector.mult(forward, speed));
 
         if (direction == 1)

@@ -21,6 +21,7 @@ public class Shield {
     }
 
     public void render() {
+        
         ui.fill(0, 0, 0);
         ui.ellipse(pos.x, pos.y, 200, 200);
 
@@ -95,6 +96,62 @@ public class Shield {
      */
     public void setUi(UI ui) {
         this.ui = ui;
+    }
+
+    /**
+     * @return the angle
+     */
+    public double getAngle() {
+        return angle;
+    }
+
+    /**
+     * @param angle the angle to set
+     */
+    public void setAngle(double angle) {
+        this.angle = angle;
+    }
+
+    /**
+     * @return the degree
+     */
+    public double getDegree() {
+        return degree;
+    }
+
+    /**
+     * @param degree the degree to set
+     */
+    public void setDegree(double degree) {
+        this.degree = degree;
+    }
+
+    /**
+     * @return the width
+     */
+    public float getWidth() {
+        return width;
+    }
+
+    /**
+     * @param width the width to set
+     */
+    public void setWidth(float width) {
+        this.width = width;
+    }
+
+    /**
+     * @return the height
+     */
+    public float getHeight() {
+        return height;
+    }
+
+    /**
+     * @param height the height to set
+     */
+    public void setHeight(float height) {
+        this.height = height;
     }
 
 }

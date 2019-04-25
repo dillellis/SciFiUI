@@ -17,8 +17,7 @@ public class ShieldButton {
 
     public void render()
     {
-        ///ui.noFill();
-        //ui.rect(pos.x- 40, pos.y - 40, 80,80);
+        
         ui.noFill();
         ui.stroke(57, 255, 20);
         ui.beginShape();
@@ -34,9 +33,5 @@ public class ShieldButton {
 
     }
 
-    public void update()
-    {
-
-
-    }
+    
 }
