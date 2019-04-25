@@ -11,7 +11,8 @@ public class UI extends PApplet {
     ScreenOutline so;
     Radar r;
     Stars s;
-    Bullet b;
+    Bullet bLeft;
+    Bullet bRight;
     Shield sh;
     ShootButton shB;
 
@@ -47,10 +48,11 @@ public class UI extends PApplet {
         return keys[c] || keys[Character.toUpperCase(c)];
     }
 
+    int which = -1;
     
     public void mouseClicked(){
 
-        int which = -1;
+        //int which = -1;
 
         
         if ((mouseX > width / 2 - 40 && mouseX < width / 2 + 40))
@@ -62,13 +64,13 @@ public class UI extends PApplet {
             }
         }
 
-        if (which == 1)
-        {
+        // if (which == 1)
+        // {
             
-            b.render();
-            b.update();
+        //     b.render();
+        //     b.update();
             
-        }
+        // }
 
      
     }
@@ -90,12 +92,13 @@ public class UI extends PApplet {
         so = new ScreenOutline(this, height, width);
         r = new Radar(this, 1, width-width/10, height/2, width/20 );
         s = new Stars(this, height, width);
-        b = new Bullet(this, 0 , height, 0.785398 , 1 , height, width );
+        bLeft = new Bullet(this, 0 , height, 1.06465, 5, 1 , height, width );
+        bRight = new Bullet(this, width , height, 5.21853 , 5, 2 ,  height, width );
         sh = new Shield(this, width/10 , height / 2);
         shB = new ShootButton(this, width / 2, height - 200);
  
     }
-
+    //0.785398
     public void draw() {
        //layered most recent at the top
 
@@ -106,10 +109,22 @@ public class UI extends PApplet {
         r.update();
         sh.render();
         sh.update();
-        b.render();
-        b.update();
+        // b.render();
+        // b.update();
         shB.render();
+
+        if (which == 1)
+        {
             
+            bLeft.render();
+            bLeft.update();
+
+            bRight.render();
+            bRight.update();
+            
+        }
+            
+        
 
        
         
