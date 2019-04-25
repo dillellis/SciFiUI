@@ -1,12 +1,11 @@
 # SciFi UI Project
 
-Name:
+Name: Dillon Ellis
 
-Student Number: 
-
-Fork this repository and use it a starter project for your assignment
+Student Number: C17322316
 
 # Description of the assignment
+This is my assigment for OOP. I decided for this assignment I would make an interface from a space ship, similar to ones you would see if a Sci Fi movie. I included a radar, a shield and two cannons to shoot bullets from.
 
 # Instructions
 
