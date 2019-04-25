@@ -87,8 +87,8 @@ public class UI extends PApplet {
         so = new ScreenOutline(this, 0, 0, height, width);
         r = new Radar(this, 1, width-width/10, height/2, width/20 );
         s = new Stars(this, height, width);
-        bLeft = new Bullet(this, 0 , height, 1.06465, 5, 1 , height, width );
-        bRight = new Bullet(this, width , height, 5.21853 , 5, 2 ,  height, width );
+        bLeft = new Bullet(this, 0 , height, 1.06465, 15, 1 , height, width );
+        bRight = new Bullet(this, width , height, 5.21853 , 15, 2 ,  height, width );
         sh = new Shield(this, width/10 , height / 2, width, height);
         shB = new ShootButton(this, width / 2 + width / 10, height - 185);
         shBu = new ShieldButton(this, width /2 - width/10, height - 200);
