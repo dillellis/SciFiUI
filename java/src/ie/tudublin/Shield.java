@@ -75,6 +75,7 @@ public class Shield extends UIObject{
     public void shieldOn()
     {
         //when the shield is on the speed is increased and the ON text appears beside the button
+        
         angle = angle + 10*degree;
         ui.fill(57, 255, 20);
         ui.textSize(20);

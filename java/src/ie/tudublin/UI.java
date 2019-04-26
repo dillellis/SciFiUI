@@ -53,7 +53,7 @@ public class UI extends PApplet {
         {
             if ((mouseY > height - 225 && mouseY < height - 145))
             {
-                 fire = (int) 1;
+                 fire ++;
     
             }
         }
@@ -110,7 +110,7 @@ public class UI extends PApplet {
 
 
         //if the value of fire has been changed then the bullets are fired
-        if (fire == 1)
+        if (fire % 2 == 0)
         {
             
             bLeft.render();
