@@ -62,6 +62,13 @@ In draw the rest of the renders and updates are not in statements or loops and r
 Main is used to runSketch in the UI and then run the program.
 
 # What I am most proud of in the assignment
+What I am most pround about in this assignment is the Shield and it's button and use of shieldOn() as a switch.
+The reason I am most proud of this part is that it was the most creative part of the assignment and how much the idea progressed. I originally  only had the circles to spin without the fading part behind it and it didnt look as good, so I increased the speed when the button is pressed and also made the black background of the circle smaller so that the three circles would be affected by the opacity of the rectangles in the background. I thought this feature looked a lot better as it actually looks like a shield.
+The second part of this was making the button a switch. Originally once the button was pressed the speed increased and would stay that way. Then I realised I could use '%' to check if the value was odd or even and this made it into a switch.
+
+The shield before: 
+
+![Shield before](images/ShieldBefore.png)
 
 # Markdown Tutorial
 

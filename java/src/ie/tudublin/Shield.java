@@ -27,7 +27,7 @@ public class Shield extends UIObject{
         
         //background circle
         ui.fill(0, 0, 0);
-        ui.ellipse(pos.x, pos.y, 200, 200);
+        ui.ellipse(pos.x, pos.y, 400, 400);
 
 
         //outline of spaceship icon
