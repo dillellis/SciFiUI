@@ -70,6 +70,10 @@ The shield before:
 
 ![Shield before](images/ShieldBefore.png)
 
+The shield after:
+
+![Shield after](images/ShieldAfter.png)
+
 # Markdown Tutorial
 
 This is *emphasis*
