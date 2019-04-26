@@ -79,7 +79,7 @@ The shield after:
 
 This is a youtube video of my assigment:
 
-[![YouTube](https://youtu.be/jbOD09Q_CYc)](https://youtu.be/jbOD09Q_CYc)
+[![YouTube](youtubepic.png)](https://youtu.be/jbOD09Q_CYc)
 
 
 # Markdown Tutorial
